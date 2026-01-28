@@ -1,0 +1,2425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.atm.AppTest" time="2.082" tests="29" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\ademk\Desktop\atm-orm V2\target\test-classes;C:\Users\ademk\Desktop\atm-orm V2\target\classes;C:\Users\ademk\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\ademk\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\ademk\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\ademk\.m2\repository\org\hibernate\orm\hibernate-core\6.4.4.Final\hibernate-core-6.4.4.Final.jar;C:\Users\ademk\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\ademk\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\ademk\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\ademk\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\ademk\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\ademk\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\ademk\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\ademk\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\ademk\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\ademk\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\ademk\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\ademk\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\ademk\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\ademk\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\ademk\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\ademk\.m2\repository\org\jboss\jandex\2.4.3.Final\jandex-2.4.3.Final.jar;C:\Users\ademk\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\ademk\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ademk\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\ademk\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ademk\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\ademk\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Africa/Lagos"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\ademk\AppData\Local\Temp\surefire1256470706012558260\surefirebooter-20260128005912963_3.jar C:\Users\ademk\AppData\Local\Temp\surefire1256470706012558260 2026-01-28T00-59-12_681-jvmRun1 surefire-20260128005912963_1tmp surefire_0-20260128005912963_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\ademk\Desktop\atm-orm V2\target\test-classes;C:\Users\ademk\Desktop\atm-orm V2\target\classes;C:\Users\ademk\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\ademk\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\ademk\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\ademk\.m2\repository\org\hibernate\orm\hibernate-core\6.4.4.Final\hibernate-core-6.4.4.Final.jar;C:\Users\ademk\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\ademk\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\ademk\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\ademk\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\ademk\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\ademk\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\ademk\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\ademk\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\ademk\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\ademk\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\ademk\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\ademk\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\ademk\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\ademk\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\ademk\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\ademk\.m2\repository\org\jboss\jandex\2.4.3.Final\jandex-2.4.3.Final.jar;C:\Users\ademk\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\ademk\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ademk\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\ademk\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ademk\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\ademk\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ademk"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\ademk\Desktop\atm-orm V2"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\ademk\AppData\Local\Temp\surefire1256470706012558260\surefirebooter-20260128005912963_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.15+9-LTS-241"/>
+    <property name="user.name" value="ademk"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\ademk\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\ademk\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.15"/>
+    <property name="user.dir" value="C:\Users\ademk\Desktop\atm-orm V2"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;c:\Users\ademk\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\ademk\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python313\Scripts\;C:\Python313\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\AutoFirma\AutoFirma;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Apache\apache-maven-3.9.12\bin;C:\Program Files\PostgreSQL\17\bin;C:\Users\ademk\AppData\Local\Microsoft\WindowsApps;C:\Users\ademk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.1.1.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.1.1\bin;;C:\Users\ademk\AppData\Roaming\npm;C:\Users\ademk\AppData\Local\GitHubDesktop\bin;C:\Program Files\Apache\apache-maven-3.9.12\bin;c:\Users\ademk\.vscode\extensions\vscjava.vscode-java-debug-0.58.5\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.15+9-LTS-241"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="invalidLoginWrongPinTest" classname="com.atm.AppTest" time="1.771">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+]]></system-out>
+    <system-err><![CDATA[Jan 28, 2026 12:59:13 AM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+INFO: HHH000204: Processing PersistenceUnitInfo [name: atmPU]
+Jan 28, 2026 12:59:13 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 6.4.4.Final
+Jan 28, 2026 12:59:13 AM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
+INFO: HHH000026: Second-level cache disabled
+Jan 28, 2026 12:59:13 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using built-in connection pool (not intended for production use)
+Jan 28, 2026 12:59:13 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+Jan 28, 2026 12:59:13 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/atm_db]
+Jan 28, 2026 12:59:13 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {password=****, user=postgres}
+Jan 28, 2026 12:59:13 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+Jan 28, 2026 12:59:13 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH10001115: Connection pool size: 20 (min=1)
+Jan 28, 2026 12:59:13 AM org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl constructDialect
+WARN: HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+Jan 28, 2026 12:59:14 AM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Jan 28, 2026 12:59:14 AM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6f6cc7da] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+]]></system-err>
+  </testcase>
+  <testcase name="transferTestInvalidAmountZeroTest" classname="com.atm.AppTest" time="0.02">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Invalid amount. Please enter a positive number.
+]]></system-out>
+  </testcase>
+  <testcase name="addInvalidCashToATMTest" classname="com.atm.AppTest" time="0.014">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Invalid amount.
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+]]></system-out>
+  </testcase>
+  <testcase name="transferTestInvalidAmountNegativeTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Invalid amount. Please enter a positive number.
+]]></system-out>
+  </testcase>
+  <testcase name="transferTestInsufficientBalanceTest" classname="com.atm.AppTest" time="0.021">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=?
+Insufficient balance.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="withdrawTestInvalidAmountNegativeTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Invalid amount. Please enter a positive number.
+]]></system-out>
+  </testcase>
+  <testcase name="transferTestBalancesChange" classname="com.atm.AppTest" time="0.028">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=?
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Transfer successful.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=?
+]]></system-out>
+  </testcase>
+  <testcase name="withdrawTestInsufficientBalanceTest" classname="com.atm.AppTest" time="0.006">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Insufficient balance.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="depositTestInvalidAmountNegativeTest" classname="com.atm.AppTest" time="0.003">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Invalid amount. Please enter a positive number.
+]]></system-out>
+  </testcase>
+  <testcase name="depositTestBalanceIncreases" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Deposit successful.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="refillPaperTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Paper refilled by 10. Total: 30
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+]]></system-out>
+  </testcase>
+  <testcase name="balanceViewTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="depositTestLargeAmountTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Deposit successful.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="withdrawTestOutOfInkTest" classname="com.atm.AppTest" time="0.015">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0 
+    where
+        a1_0.id=?
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+ATM is out of ink.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="withdrawTestInvalidAmountZeroTest" classname="com.atm.AppTest" time="0.006">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Invalid amount. Please enter a positive number.
+]]></system-out>
+  </testcase>
+  <testcase name="transferTestMultipleTransfersTest" classname="com.atm.AppTest" time="0.022">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=?
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Transfer successful.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=?
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Transfer successful.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=?
+]]></system-out>
+  </testcase>
+  <testcase name="depositTestInvalidAmountZeroTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Invalid amount. Please enter a positive number.
+]]></system-out>
+  </testcase>
+  <testcase name="updateFirmwareTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Firmware updated to: v2.0
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+]]></system-out>
+  </testcase>
+  <testcase name="technicianViewOnlyATMStatusTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+]]></system-out>
+  </testcase>
+  <testcase name="addCashToATMTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+$5000.00 added to ATM. Total cash: $15000.00
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+]]></system-out>
+  </testcase>
+  <testcase name="withdrawTestInsufficientATMCashTest" classname="com.atm.AppTest" time="0.012">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Collected $10000.00 from ATM. Remaining: $0.00
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+ATM has insufficient cash.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="refillInkTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Ink refilled by 15. Total: 35
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+]]></system-out>
+  </testcase>
+  <testcase name="invalidLoginWrongCardTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+]]></system-out>
+  </testcase>
+  <testcase name="withdrawTestBalanceDecreases" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Withdrawal successful.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="transferTestInvalidReceiverTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=?
+Target account not found.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="atmStatusAfterMultipleOperationsTest" classname="com.atm.AppTest" time="0.014">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Withdrawal successful.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    insert 
+    into
+        transactions
+        (account_id, amount, time, type) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        accounts 
+    set
+        balance=?,
+        card_number=?,
+        failedattempts=?,
+        pin=? 
+    where
+        account_id=?
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Deposit successful.
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Paper refilled by 5. Total: 25
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+$1000.00 added to ATM. Total cash: $11100.00
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="customerLoginTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+]]></system-out>
+  </testcase>
+  <testcase name="withdrawTestOutOfPaperTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0 
+    where
+        a1_0.id=?
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.card_number=? 
+        and a1_0.pin=?
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+ATM is out of paper.
+Hibernate: 
+    select
+        a1_0.account_id,
+        a1_0.balance,
+        a1_0.card_number,
+        a1_0.failedattempts,
+        a1_0.pin 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="collectAllCashTest" classname="com.atm.AppTest" time="0.007">
+    <system-out><![CDATA[Hibernate: 
+    delete 
+    from
+        transactions
+Hibernate: 
+    delete 
+    from
+        accounts
+Hibernate: 
+    delete 
+    from
+        atm_state
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        accounts
+        (balance, card_number, failedattempts, pin, account_id) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        atm_state
+        (cash, firmware_version, ink, paper) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+Hibernate: 
+    update
+        atm_state 
+    set
+        cash=?,
+        firmware_version=?,
+        ink=?,
+        paper=? 
+    where
+        id=?
+Collected $10000.00 from ATM. Remaining: $0.00
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.cash,
+        a1_0.firmware_version,
+        a1_0.ink,
+        a1_0.paper 
+    from
+        atm_state a1_0
+]]></system-out>
+  </testcase>
+</testsuite>

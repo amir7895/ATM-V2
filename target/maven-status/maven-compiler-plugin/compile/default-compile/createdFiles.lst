@@ -1,0 +1,8 @@
+com\atm\model\ATMState.class
+com\atm\service\ATMService.class
+com\atm\core\ATMApplication.class
+com\atm\ui\ATMConsoleUI.class
+com\atm\model\Account.class
+com\atm\model\Transaction.class
+com\atm\db\DataInitializer.class
+com\atm\db\JpaManager.class
