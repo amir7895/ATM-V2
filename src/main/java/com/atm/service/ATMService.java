@@ -239,20 +239,27 @@ public class ATMService {
 
         try {
             ATMState state = getATMState(em);
-            
+
+            boolean outOfPaper = state.getPaper() <= 0;
+            boolean outOfInk = state.getInk() <= 0;
+
+            if (outOfPaper || outOfInk) {
+                em.getTransaction().rollback();
+                System.out.println("Transaction successful.");
+                if (outOfPaper && outOfInk) {
+                    System.out.println("Sorry, we cannot print the receipt. The ATM is out of paper and ink.");
+                } else if (outOfPaper) {
+                    System.out.println("Sorry, we cannot print the receipt. The ATM is out of paper.");
+                } else {
+                    System.out.println("Sorry, we cannot print the receipt. The ATM is out of ink.");
+                }
+                return;
+            }
+
             // Decrement paper and ink when printing receipt
-            if (state.getPaper() > 0) {
-                state.setPaper(state.getPaper() - 1);
-            } else {
-                System.out.println("Warning: Out of paper!");
-            }
-            
-            if (state.getInk() > 0) {
-                state.setInk(state.getInk() - 1);
-            } else {
-                System.out.println("Warning: Out of ink!");
-            }
-            
+            state.setPaper(state.getPaper() - 1);
+            state.setInk(state.getInk() - 1);
+
             em.merge(state);
             em.getTransaction().commit();
         } catch (Exception e) {

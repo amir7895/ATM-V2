@@ -41,7 +41,7 @@ public class DataInitializer {
             ATMState atmState = new ATMState();
             // Distribution: 100×$100 + 150×$50 + 200×$20 = $10,000 + $7,500 + $4,000 = $21,500
             atmState.setCash(21500.0);  // Must match banknotes total!
-            atmState.setPaper(100);     // Increased for demo
+            atmState.setPaper(0);       // Set to 0 for out-of-paper testing
             atmState.setInk(100);       // Increased for demo
             atmState.setNotes100(100);  // 100 x $100 notes = $10,000
             atmState.setNotes50(150);   // 150 x $50 notes = $7,500
