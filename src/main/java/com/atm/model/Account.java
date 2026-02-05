@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "accounts")
-public class Account {
+public class Account extends BaseEntity {
 
     @Id
     @Column(name = "account_id")

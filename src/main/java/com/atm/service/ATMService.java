@@ -281,6 +281,10 @@ public class ATMService {
             System.out.printf("Paper: %d\n", state.getPaper());
             System.out.printf("Ink: %d\n", state.getInk());
             System.out.printf("Firmware: %s\n", state.getFirmwareVersion());
+            System.out.println("Banknotes:");
+            System.out.printf("  $20 notes: %d\n", state.getNotes20());
+            System.out.printf("  $50 notes: %d\n", state.getNotes50());
+            System.out.printf("  $100 notes: %d\n", state.getNotes100());
             System.out.println("====================\n");
         } finally {
             em.close();
@@ -323,9 +327,16 @@ public class ATMService {
         }
     }
 
-    public void addCashToATM(double amount) {
-        if (amount <= 0) {
-            System.out.println("Invalid amount.");
+    public void addCashToATM(int notes20, int notes50, int notes100) {
+        if (notes20 < 0 || notes50 < 0 || notes100 < 0) {
+            System.out.println("Invalid amount. Banknotes cannot be negative.");
+            return;
+        }
+
+        double totalCash = (notes20 * 20) + (notes50 * 50) + (notes100 * 100);
+        
+        if (totalCash == 0) {
+            System.out.println("Please add at least one banknote.");
             return;
         }
 
@@ -334,10 +345,18 @@ public class ATMService {
 
         try {
             ATMState state = getATMState(em);
-            state.addCash(amount);
+            state.setCash(state.getCash() + totalCash);
+            state.setNotes20(state.getNotes20() + notes20);
+            state.setNotes50(state.getNotes50() + notes50);
+            state.setNotes100(state.getNotes100() + notes100);
             em.merge(state);
             em.getTransaction().commit();
-            System.out.printf("$%.2f added to ATM. Total cash: $%.2f\n", amount, state.getCash());
+            System.out.printf("\n=== CASH ADDED ===");
+            System.out.printf("$20 notes added: %d\n", notes20);
+            System.out.printf("$50 notes added: %d\n", notes50);
+            System.out.printf("$100 notes added: %d\n", notes100);
+            System.out.printf("Total cash added: $%.2f\n", totalCash);
+            System.out.printf("ATM total cash: $%.2f\n==================\n", state.getCash());
         } catch (Exception e) {
             em.getTransaction().rollback();
             System.out.println("Operation failed: " + e.getMessage());
@@ -346,17 +365,53 @@ public class ATMService {
         }
     }
 
-    public void collectAllCash() {
+    public void collectCash(int notes20, int notes50, int notes100) {
+        if (notes20 < 0 || notes50 < 0 || notes100 < 0) {
+            System.out.println("Invalid banknote quantities. Please enter positive numbers.");
+            return;
+        }
+
         EntityManager em = JpaManager.getEntityManager();
         em.getTransaction().begin();
 
         try {
             ATMState state = getATMState(em);
-            double cash = state.getCash();
-            state.collectCash(cash);
+            
+            // Check if requested banknotes are available
+            if (state.getNotes20() < notes20) {
+                System.out.println("Not enough $20 notes. Available: " + state.getNotes20());
+                em.getTransaction().rollback();
+                return;
+            }
+            if (state.getNotes50() < notes50) {
+                System.out.println("Not enough $50 notes. Available: " + state.getNotes50());
+                em.getTransaction().rollback();
+                return;
+            }
+            if (state.getNotes100() < notes100) {
+                System.out.println("Not enough $100 notes. Available: " + state.getNotes100());
+                em.getTransaction().rollback();
+                return;
+            }
+            
+            // Calculate total amount
+            double totalAmount = (notes20 * 20) + (notes50 * 50) + (notes100 * 100);
+            
+            // Update ATM state
+            state.setCash(state.getCash() - totalAmount);
+            state.setNotes20(state.getNotes20() - notes20);
+            state.setNotes50(state.getNotes50() - notes50);
+            state.setNotes100(state.getNotes100() - notes100);
+            
             em.merge(state);
             em.getTransaction().commit();
-            System.out.printf("Collected $%.2f from ATM. Remaining: $%.2f\n", cash, state.getCash());
+            
+            System.out.printf("\n=== CASH COLLECTED ===\n");
+            System.out.printf("$20 notes collected: %d\n", notes20);
+            System.out.printf("$50 notes collected: %d\n", notes50);
+            System.out.printf("$100 notes collected: %d\n", notes100);
+            System.out.printf("Total collected: $%.2f\n", totalAmount);
+            System.out.printf("Remaining ATM cash: $%.2f\n==================\n", state.getCash());
         } catch (Exception e) {
             em.getTransaction().rollback();
             System.out.println("Collection failed: " + e.getMessage());

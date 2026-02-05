@@ -192,15 +192,9 @@ public class ATMConsoleUI {
                     System.out.println("Invalid amount.");
                 }
             } else if (choice.equals("4")) {
-                System.out.print("Enter amount of cash to add: ");
-                try {
-                    double amount = Double.parseDouble(sc.nextLine().trim());
-                    service.addCashToATM(amount);
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid amount.");
-                }
+                addCashWithBanknotes();
             } else if (choice.equals("5")) {
-                service.collectAllCash();
+                collectCashAmount();
             } else if (choice.equals("6")) {
                 System.out.print("Enter new firmware version: ");
                 String version = sc.nextLine().trim();
@@ -211,6 +205,52 @@ public class ATMConsoleUI {
             } else {
                 System.out.println("Invalid choice. Try again.");
             }
+        }
+    }
+
+    private void addCashWithBanknotes() {
+        System.out.println("\n===== ADD CASH TO ATM =====");
+        try {
+            System.out.print("Enter number of $20 notes: ");
+            int notes20 = Integer.parseInt(sc.nextLine().trim());
+            
+            System.out.print("Enter number of $50 notes: ");
+            int notes50 = Integer.parseInt(sc.nextLine().trim());
+            
+            System.out.print("Enter number of $100 notes: ");
+            int notes100 = Integer.parseInt(sc.nextLine().trim());
+            
+            if (notes20 < 0 || notes50 < 0 || notes100 < 0) {
+                System.out.println("Invalid amount. Banknotes cannot be negative.");
+                return;
+            }
+            
+            service.addCashToATM(notes20, notes50, notes100);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter valid numbers.");
+        }
+    }
+
+    private void collectCashAmount() {
+        System.out.println("\n===== COLLECT CASH FROM ATM =====");
+        try {
+            System.out.print("Enter number of $20 notes to collect: ");
+            int notes20 = Integer.parseInt(sc.nextLine().trim());
+            
+            System.out.print("Enter number of $50 notes to collect: ");
+            int notes50 = Integer.parseInt(sc.nextLine().trim());
+            
+            System.out.print("Enter number of $100 notes to collect: ");
+            int notes100 = Integer.parseInt(sc.nextLine().trim());
+            
+            if (notes20 < 0 || notes50 < 0 || notes100 < 0) {
+                System.out.println("Invalid quantities. Please enter positive numbers.");
+                return;
+            }
+            
+            service.collectCash(notes20, notes50, notes100);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter whole numbers.");
         }
     }
 }

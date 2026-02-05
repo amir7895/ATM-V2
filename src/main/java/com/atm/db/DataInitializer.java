@@ -37,11 +37,15 @@ public class DataInitializer {
             acc2.setBalance(3000.0);
             acc2.setFailedAttempts(0);
             
-            // Create ATM State
+            // Create ATM State with plenty of supplies for demo
             ATMState atmState = new ATMState();
-            atmState.setCash(10000.0);
-            atmState.setPaper(20);
-            atmState.setInk(20);
+            // Distribution: 100×$100 + 150×$50 + 200×$20 = $10,000 + $7,500 + $4,000 = $21,500
+            atmState.setCash(21500.0);  // Must match banknotes total!
+            atmState.setPaper(100);     // Increased for demo
+            atmState.setInk(100);       // Increased for demo
+            atmState.setNotes100(100);  // 100 x $100 notes = $10,000
+            atmState.setNotes50(150);   // 150 x $50 notes = $7,500
+            atmState.setNotes20(200);   // 200 x $20 notes = $4,000
             atmState.setFirmwareVersion("v1.0");
             
             em.persist(acc1);
@@ -50,9 +54,10 @@ public class DataInitializer {
             
             em.getTransaction().commit();
             System.out.println("\n=== Test data initialized successfully! ===");
-            System.out.println("Customer 1 - Card: 1111, PIN: 1111 (Balance: 5000)");
-            System.out.println("Customer 2 - Card: 2222, PIN: 2222 (Balance: 3000)");
-            System.out.println("ATM State - Cash: 10000, Paper: 20, Ink: 20, Firmware: v1.0\n");
+            System.out.println("Customer 1 - Card: 1111, PIN: 1111 (Balance: $5000)");
+            System.out.println("Customer 2 - Card: 2222, PIN: 2222 (Balance: $3000)");
+            System.out.println("ATM State - Cash: $21,500, Paper: 100, Ink: 100, Firmware: v1.0");
+            System.out.println("Banknotes - $100: 100 ($10,000), $50: 150 ($7,500), $20: 200 ($4,000)\n");
             
         } catch (Exception e) {
             if (em.getTransaction().isActive()) {

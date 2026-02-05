@@ -134,11 +134,12 @@ public class AppTest {
 
     @Test
     public void withdrawTestInsufficientATMCashTest() {
-        // Drain ATM cash
-        service.collectAllCash();
+        // ATM has: 50x$100 + 75x$50 + 100x$20 = $5000 + $3750 + $2000 = $10,750
+        // Collect 49x$100 + 72x$50 + 0x$20 = $4900 + $3600 = $8,500 leaving $2,250
+        service.collectCash(0, 72, 49);  
         
         Account account = service.login("1111", "1111");
-        boolean success = service.withdraw(account, 100.0);
+        boolean success = service.withdraw(account, 3000.0);  // Try to withdraw $3000 but only $2,250 available
 
         assertEquals(false, success);
         Account refreshed = service.getAccountDetails(account.getAccountId());
@@ -274,24 +275,29 @@ public class AppTest {
 
     @Test
     public void addCashToATMTest() {
-        service.addCashToATM(5000.0);
+        // Add: 10 x $100 + 5 x $50 + 0 x $20 = $1000 + $250 = $1250
+        // Initial: $10,750 + $1,250 = $12,000
+        service.addCashToATM(0, 5, 10);
         ATMState state = getATMState();
-        assertEquals(15000.0, state.getCash(), 0.01);
+        assertEquals(12000.0, state.getCash(), 0.01);
     }
 
     @Test
     public void addInvalidCashToATMTest() {
         ATMState before = getATMState();
-        service.addCashToATM(-500.0);
+        service.addCashToATM(-5, 0, 0);  // Invalid - negative banknotes
         ATMState after = getATMState();
         assertEquals(before.getCash(), after.getCash(), 0.01);
     }
 
     @Test
-    public void collectAllCashTest() {
-        service.collectAllCash();
+    public void collectCashTest() {
+        ATMState before = getATMState();
+        double totalCash = before.getCash();
+        // Collect 25x$100 + 40x$50 + 0x$20 = $2500 + $2000 = $4,500
+        service.collectCash(0, 40, 25);
         ATMState state = getATMState();
-        assertEquals(0.0, state.getCash(), 0.01);
+        assertEquals(totalCash - 4500.0, state.getCash(), 0.01);
     }
 
     @Test
@@ -313,7 +319,7 @@ public class AppTest {
         service.withdraw(account, 200.0);
         service.deposit(account, 300.0);
         service.refillPaper(5);
-        service.addCashToATM(1000.0);
+        service.addCashToATM(0, 0, 10);  // Add 10 x $100 notes = $1000
 
         // Check ATM status is consistent
         ATMState state = getATMState();
@@ -353,9 +359,13 @@ public class AppTest {
             acc2.setFailedAttempts(0);
 
             ATMState atmState = new ATMState();
-            atmState.setCash(10000.0);
+            // Distribution: 50×$100 + 75×$50 + 100×$20 = $5,000 + $3,750 + $2,000 = $10,750
+            atmState.setCash(10750.0);
             atmState.setPaper(20);
             atmState.setInk(20);
+            atmState.setNotes100(50);   // 50 x $100 = $5,000
+            atmState.setNotes50(75);    // 75 x $50 = $3,750
+            atmState.setNotes20(100);   // 100 x $20 = $2,000
             atmState.setFirmwareVersion("v1.0");
 
             em.persist(acc1);
